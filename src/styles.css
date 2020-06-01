@@ -1,1 +1,65 @@
-/* You can add global styles to this file, and also import other style files */
+.pointer{
+    cursor: pointer;
+}
+.mg-logo{
+    margin:1.5rem;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+/* navigation bar */
+.click-nav{
+    background-color: #d6dce5;
+    color: #333f50;
+    font-weight: bold;
+}
+.bottom-link{
+    list-style-type: none;
+    margin: auto;
+    padding: auto;
+}
+.bottom-link-item{
+    float: left;
+    text-align: center;
+    padding: 16px;
+}
+
+/* background color */
+.bg-dark-blue{
+    background-color: #333f50;
+}
+.bg-mid-blue{
+    background-color: #8497b0;
+}
+.bg-light-blue{
+    background-color: #d6dce5;
+}
+.bg-white{
+    background-color: #ffffff;
+}
+.bg-yellow{
+    background-color: #ffc000;
+}
+
+/* text color */
+.txt-bold{
+    font-weight: bold;
+}
+.txt-dark-blue{
+    color: #333f50;
+}
+.txt-mid-blue{
+    color: #8497b0;
+}
+.txt-light-blue{
+    color: #d6dce5;
+}
+.txt-white{
+    color: #ffffff;
+}
+.txt-yellow{
+    color: #ffc000;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

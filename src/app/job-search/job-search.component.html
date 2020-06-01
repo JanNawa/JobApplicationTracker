@@ -1,0 +1,98 @@
+<!-- Search Bar -->
+<nav class="navbar navbar-expand-lg bg-mid-blue">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle txt-dark-blue" href="#" id="navbarDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div>
+  <!-- <div class="row">
+        <div class="col-4 bg-light-blue">List</div>
+        <div class="col-8 bg-yellow">Detail</div>
+      </div> -->
+  <mat-drawer-container class="drawer-container">
+    <mat-drawer mode="side" opened class="col-3">
+      <div class="text-center">
+        <p>Drawer content</p>
+        <p>{{searchJobs.length}} {{searchJobs.length > 1 ? 'Jobs' : 'Job'}}</p>
+      </div>
+      <div>
+        <div *ngIf="searchJobs.length == 0">No records found.</div>
+        <mat-card-content>
+          <div *ngFor="let job of searchJobs">
+            <mat-card class="pointer" (click)="showDetail(job)">
+              <mat-card-title>
+                <h4>{{job.jobtitle}}</h4>
+              </mat-card-title>
+              <mat-card-content>
+                <p>
+                  {{job.company}}
+                  <br>
+                  {{job.formattedLocation}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </mat-card-content>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content class="col-9">Main content
+      <div>
+        <div *ngIf="selectedJob.length == 0">No job selected.</div>
+        <div class="row">
+          <div class="col-9">
+            <h1>{{selectedJob.jobtitle}}</h1>
+            <h3>{{selectedJob.company}}</h3>
+            <h5>{{selectedJob.formattedLocation}}</h5>
+          </div>
+          <div class="col-3">
+            <div class="row">
+              <button class="btn bg-yellow txt-white pointer">
+                <mat-icon aria-hidden="false" aria-label="save to wish list">favorite</mat-icon>
+                Save to Wish List
+              </button>
+            </div>
+            <div class="row">
+              <p>{{selectedJob.formattedRelativeTime}}</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <mat-tab-group>
+            <mat-tab label="Description">
+              <div>
+                <p>
+                  {{selectedJob.snippet}}
+                </p>
+              </div>
+            </mat-tab>
+            <mat-tab label="Feedbacks"> Feedbacks </mat-tab>
+          </mat-tab-group>
+        </div>
+
+      </div>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>

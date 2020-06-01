@@ -1,0 +1,13 @@
+<form class="form-inline">
+    <div class="form-group">
+        <mat-form-field appearance="fill">
+            <mat-label>Enter your email</mat-label>
+            <input matInput placeholder="pat@example.com" [formControl]="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <!-- <input class="form-control" id="inputEmail" class="form-control" type="email" placeholder="Email address"
+            required autofocus> -->
+        <button class="btn btn-lg bg-yellow txt-white" type="submit" routerLink="/signup">Sign Up</button>
+        Send email to sign up form
+    </div>
+</form>
