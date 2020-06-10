@@ -20,11 +20,7 @@
 
 /** IE10 and IE11 requires the following for NgClass support on SVG elements */
 import 'classlist.js';  // Run `npm install --save classlist.js`.
-
-if (!Element.prototype.matches) {
-    Element.prototype.matches = (<any>Element.prototype).msMatchesSelector ||
-      Element.prototype.webkitMatchesSelector;
-  }
+import 'element-remove'; // Run 'npm install --save element-remove'
 
 /**
  * Web Animations `@angular/platform-browser/animations`
