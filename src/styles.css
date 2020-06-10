@@ -1,11 +1,21 @@
 .pointer{
     cursor: pointer;
 }
-.mg-logo{
+.mg-button{
     margin:1.5rem;
     display: block;
-    width: 60px;
-    height: 60px;
+}
+.mg-logo{
+    margin:1rem;
+    display: block;
+    width: 3rem;
+    height: 3rem;
+}
+.mg-nav-logo{
+    margin:0.1rem;
+    display: block;
+    width: 3rem;
+    height: 3rem;
 }
 
 /* navigation bar */

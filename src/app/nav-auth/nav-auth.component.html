@@ -1,0 +1,45 @@
+<div class="bg-dark-blue">
+    <div class="container">
+      <nav class="navbar navbar-dark navbar-expand-lg bg-dark-blue">
+        <div class="col-1">
+          <!-- <a class="navbar-brand" href="#"> -->
+          <img class="mg-nav-logo" src="../assets/images/job-tracker-logo.png" alt="Job Tracker">
+          <!-- </a> -->
+        </div>
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNavbarSupportedContent"
+          aria-controls="mainNavbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+          </span>
+        </button>
+  
+        <div class="col-10 collapse navbar-collapse" id="mainNavbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link txt-white disabled" routerLink="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link txt-white" routerLink="/job-search">Job Search<span
+                  class="sr-only txt-bold">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link txt-white disabled" routerLink="/activities">Activities</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link txt-white disabled" routerLink="/contacts">Contacts</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle txt-dark-blue pointer" id="navbarDropdown" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                User Account
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" routerLink="/user-profile">User Profile</a>
+                  <a class="dropdown-item" routerLink="">Log Out</a>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>

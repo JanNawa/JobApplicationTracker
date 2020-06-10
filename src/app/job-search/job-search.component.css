@@ -1,4 +1,19 @@
 .drawer-container{
     height: 800px;
-    border: 1px solid #8497b0;;
+    border: 1px solid #8497b0;
+}
+
+.material-icons.color_yellow { 
+    color: #ffc000; 
+}
+
+/* small screen */
+@media screen and (max-width: 600px) {
+    .mat-drawer-content {
+      display: none;
+    }
+
+    .mat-drawer {
+        width: 100%;
+    }
 }
