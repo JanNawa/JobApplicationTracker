@@ -1,45 +1,41 @@
-<div class="container">
-    <div class=" row w-100">
+<main class="container">
+    <nav class=" row w-100">
         <div class="row float-right mx-1 my-2">
             <button class="close pointer" aria-label="Close" (click)="goBack()">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-9 m-3">
+    </nav>
+    <section class="row-12">
+        <header class="col-12 m-3">
             <h1>{{selectedJob$.jobtitle}}</h1>
             <h3>{{selectedJob$.company}}</h3>
             <h5>{{selectedJob$.formattedLocation}}</h5>
-        </div>
-        <div class="col-2">
-            <div class="row-12">
-                <button class="btn bg-yellow txt-white pointer m-3">
-                    <mat-icon aria-hidden="false" aria-label="save to wish list" (click)="saveToWishList()">favorite
-                    </mat-icon>
-                </button>
-                <div class="row-12">
-                    <p>{{selectedJob$.formattedRelativeTime}}</p>
-                </div>
-            </div>
-        </div>
-        <div>
+        </header>
+        <header class="col-12">
+            <button class="btn bg-yellow txt-white pointer m-3">
+                <mat-icon aria-hidden="false" aria-label="save to wish list" (click)="saveToWishList()">favorite
+                </mat-icon>
+            </button>
+            <p class="m-3">{{selectedJob$.formattedRelativeTime}}</p>
+        </header>
+        <section>
             <mat-tab-group>
                 <mat-tab label="Role Description">
-                    <div class="m-4">
+                    <article class="m-4">
                         <p>
                             {{selectedJob$.snippet}}
                         </p>
-                    </div>
+                    </article>
                 </mat-tab>
                 <mat-tab label="Company Feedbacks">
-                    <div class="m-4">
+                    <article class="m-4">
                         <p>
                             Feedbacks
                         </p>
-                    </div>
+                    </article>
                 </mat-tab>
             </mat-tab-group>
-        </div>
-    </div>
-</div>
+        </section>
+    </section>
+</main>

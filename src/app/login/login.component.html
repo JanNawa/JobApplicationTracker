@@ -1,10 +1,10 @@
-<div class="container">
-    <div class="row justify-content-center">
+<main class="container">
+    <header class="row justify-content-center">
         <a class="navbar-brand" routerLink="">
             <img src="../assets/images/job-tracker-logo.png" class="mg-logo" alt="Job Tracker">
         </a>
-    </div>
-    <div class="row">
+    </header>
+    <section class="row">
         <div class="col-xs-10 col-sm-9 col-md-7 col-lg-5 mx-auto">
             <div class="card">
                 <div class="card-body">
@@ -34,12 +34,6 @@
                                     Password is required.
                                 </small>
                             </div>
-                            <div class="text-danger ml-2"
-                                *ngIf="submitted && loginFormControl.password.errors?.minlength">
-                                <small>
-                                    Password must be at least 15 characters.
-                                </small>
-                            </div>
                         </div>
                         <div class="form-group">
                             <button class="btn btn-lg bg-dark-blue txt-white btn-block" type="submit">Log In</button>
@@ -58,5 +52,5 @@
                 </div>
             </div>
         </div>
-    </div>
-</div>
+    </section>
+</main>

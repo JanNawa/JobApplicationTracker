@@ -24,8 +24,7 @@ export class LoginComponent implements OnInit {
           this.customValidator.emailValidator()]
       ],
       password: ['',
-        [Validators.required,
-        Validators.minLength(15)]]
+        [Validators.required]]
     });
   }
 

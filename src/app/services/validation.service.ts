@@ -1,3 +1,5 @@
+// Email and password match validation are modified from J. Watmore, "Angular 9 - Reactive Forms Validation Example," 19 April 2020. [Online]. Available: https://jasonwatmore.com/post/2020/04/19/angular-9-reactive-forms-validation-example. [Accessed 10 June 2020].
+
 import { Injectable } from '@angular/core';
 import { ValidatorFn, AbstractControl } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
@@ -15,8 +17,8 @@ export class ValidationService {
         return null;
       }
       const regex = new RegExp('^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$');
-      const valid = regex.test(control.value);
-      return valid ? null : { invalidEmail: true };
+      const validValue = regex.test(control.value);
+      return validValue ? null : { invalidEmail: true };
     };
   }
 
@@ -32,7 +34,6 @@ export class ValidationService {
       if (confirmPasswordControl.errors && !confirmPasswordControl.errors.passwordMismatch) {
         return null;
       }
-
 
       if (passwordControl.value !== confirmPasswordControl.value) {
         // password mismatch

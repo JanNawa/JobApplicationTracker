@@ -1,9 +1,13 @@
+// Dummy data from Indeed, "Job Search API," Indeed, [Online]. Available: https://opensource.indeedeng.io/api-documentation/docs/job-search/. [Accessed 10 June 2020].
+// Dummy text from Lorem Ipsum, "Lorem Ipsum," Lorem Ipsum, [Online]. Available: https://www.lipsum.com/. [Accessed 10 June 2020].
+
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class JobService {
   
   jobs = {

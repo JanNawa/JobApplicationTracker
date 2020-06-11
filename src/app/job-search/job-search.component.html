@@ -5,26 +5,26 @@
 <app-nav-search></app-nav-search>
 
 <!-- Content -->
-<div>
-  <div *ngIf="searchJobs$.length == 0">
+<main>
+  <section *ngIf="searchJobs$.length == 0">
     <h2 class="text-center m-3">No job found</h2>
-  </div>
+  </section>
   
   <mat-drawer-container *ngIf="searchJobs$.length > 0" class="drawer-container">
     <!-- drawer content -->
       <mat-drawer mode="side" opened class="col-12 col-md-3 col-lg-4">
-        <div class="text-center m-2">
+        <header class="text-center m-2">
           <p>{{getSearchJobsLength()}}</p>
-        </div>
-        <div>
+        </header>
+        <section>
           <mat-card-content>
             <div *ngFor="let job of searchJobs$; let i = index">
               <mat-card class="pointer" [ngClass]="{'bg-light-blue' : clickedCard[i], 'bg-white' : !clickedCard[i]}"
                 (click)="showDetail(job); onClickCard(i)">
-                <div class="row">
-                  <div class="col-3 col-md-1 col-lg-3">
+                <header class="row">
+                  <aside class="col-3 col-md-1 col-lg-3">
                     <img class="img-fluid" src="../../assets/images/company-logo.png">
-                  </div>
+                  </aside>
                   <div class="col-9 col-md-11 col-lg-9">
                     <mat-card-title>
                       <h4>{{job.jobtitle}}</h4>
@@ -37,62 +37,59 @@
                       </p>
                     </mat-card-content>
                   </div>
-                </div>
-                <div class="row">
+                </header>
+                <footer class="row">
                   <button class="btn btn-block bg-dark-blue txt-white pointer mx-1 my-1 d-md-none" (click)="goToJobDetail(job.jobkey)">
                     Show Job Detail
                   </button>
-                </div>
+                </footer>
               </mat-card>
             </div>
           </mat-card-content>
-        </div>
+        </section>
         <!-- <mat-paginator (page)="pageChangeEvent($event)" [length]="jobsLength" [pageSize]="pageSize">
         </mat-paginator> -->
       </mat-drawer>
 
     <!-- main content -->
       <mat-drawer-content class="col-1 col-md-9 col-lg-8">
-        <div>
+        <section>
           <div *ngIf="searchJobs$.length == 0"><p class="text-center">No job found.</p></div>
-          <!-- <div *ngIf="searchJobs.length > 0 && selectedJob.length == 0"><p class="text-center">No job selected.</p></div> -->
           <div class="row">
-            <div class="col-9 m-3">
+            <header class="col-9 m-3">
               <h1>{{selectedJob.jobtitle}}</h1>
               <h3>{{selectedJob.company}}</h3>
               <h5>{{selectedJob.formattedLocation}}</h5>
-            </div>
-            <div class="col-2">
+            </header>
+            <aside class="col-2">
               <div class="row">
                 <button class="btn bg-yellow txt-white pointer m-3">
                   <mat-icon aria-hidden="false" aria-label="save to wish list" (click)="saveToWishList()">favorite
                   </mat-icon>
                 </button>
-                <div class="row">
-                  <p>{{selectedJob.formattedRelativeTime}}</p>
-                </div>
+                <p>{{selectedJob.formattedRelativeTime}}</p>
               </div>
-            </div>
-            <div>
+            </aside>
+            <section>
               <mat-tab-group>
                 <mat-tab label="Role Description">
-                  <div class="m-4">
+                  <article class="m-4">
                     <p>
                       {{selectedJob.snippet}}
                     </p>
-                  </div>
+                  </article>
                 </mat-tab>
                 <mat-tab label="Company Feedbacks">
-                  <div class="m-4">
+                  <article class="m-4">
                     <p>
                       Feedbacks
                     </p>
-                  </div>
+                  </article>
                 </mat-tab>
               </mat-tab-group>
-            </div>
+            </section>
           </div>
-        </div>
+        </section>
       </mat-drawer-content>
   </mat-drawer-container>
-</div>
+</main>
