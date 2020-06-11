@@ -259,7 +259,11 @@ export function MustMatch(controlName: string, matchingControlName: string) {
 ## Acknowledgments
 
 [1](https://graf1x.com/color-psychology-emotion-meaning-poster/) Graf1x, "Color Meaning and Psychology," Graf1x, [Online]. Available: https://graf1x.com/color-psychology-emotion-meaning-poster/. [Accessed 10 June 2020].
+
 [2](https://opensource.indeedeng.io/api-documentation/docs/job-search/) Indeed, "Job Search API," Indeed, [Online]. Available: https://opensource.indeedeng.io/api-documentation/docs/job-search/. [Accessed 10 June 2020].
+
 [3](https://www.lipsum.com/) Lorem Ipsum, "Lorem Ipsum," Lorem Ipsum, [Online]. Available: https://www.lipsum.com/. [Accessed 10 June 2020].
+
 [4](https://getbootstrap.com/docs/4.0/components/navbar/) Bootstrap, "Navbar," Bootstrap, [Online]. Available: https://getbootstrap.com/docs/4.0/components/navbar/. [Accessed 10 June 2020].
+
 [5](https://jasonwatmore.com/post/2020/04/19/angular-9-reactive-forms-validation-example) J. Watmore, "Angular 9 - Reactive Forms Validation Example," 19 April 2020. [Online]. Available: https://jasonwatmore.com/post/2020/04/19/angular-9-reactive-forms-validation-example. [Accessed 10 June 2020].

@@ -2,6 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { ValidationService } from '../services/validation.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-forget-password-dialog',
@@ -18,7 +19,8 @@ export class ForgetPasswordDialogComponent implements OnInit {
     private _formBuilder: FormBuilder,
     private dialogRef: MatDialogRef<ForgetPasswordDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data, 
-    private customValidator: ValidationService) {
+    private customValidator: ValidationService,
+    private _router: Router) {
 
   }
 
@@ -35,7 +37,6 @@ export class ForgetPasswordDialogComponent implements OnInit {
     return this.form.controls;
   }
 
-
   sendEmail() {
 
     this.submitted = true;
@@ -45,5 +46,9 @@ export class ForgetPasswordDialogComponent implements OnInit {
       this.dialogRef.close(this.form.value);
     }
 
+  }
+
+  goBack(){
+    this.dialogRef.close();
   }
 }

@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute, NavigationExtras, ParamMap, Params, Data } from '@angular/router'
 import { JobService } from '../services/job.service';
 import { Subscription } from 'rxjs';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-job-detail',
